@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <title>Convertidor de medidas (almacenamiento)</title>
+  </head>
+  <body>
+    <!-- Navbar Bootstrap 4 con Dropdown -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: darkred"
+      id="barranav"
+    >
+      <div class="container-fluid" id="titlenav">
+        <a class="navbar-brand" href="index.html">Computer Store</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html" id="menus"
+                >Home</a
+              >
+            </li>
+           <!-- Creando dropdown de administrador -->
+           <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Administrador
+            </a>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: darkred"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="crear_bd.php"
+                  id="submenus"
+                  >Crear Base de datos</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" 
+                  href="crear_tabla.php" 
+                  id="submenus"
+                  >Crear tabla</a>
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="backup.php"
+                  id="submenus"
+                  >Generar Backup</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="pdf.php"
+                  id="submenus"
+                  >Generar PDF</a
+                >
+              </li>
+            </ul>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#" id="menus">Administrador</a>
+          </li> -->
+          <li class="nav-item">
+            <a class="nav-link" href="inventario.html" id="menus"
+              >Inventario</a
+            >
+          </li>
+          <!--Creando el Dropdown-->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Utilidades
+            </a>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdownMenuLink"
+              style="background-color: darkred"
+            >
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="precio_venta.html"
+                  id="submenus"
+                  >Calculadora de precio</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="datos.html" id="submenus"
+                  >Equivalencias entre tamaño de datos</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+    <!-- Formulario para calcular el valor de la venta. -->
+<div class="container" >
+    <h1 class="precio_venta_titulo" id="titulos-ventas">
+        Calculadora de precio de venta
+    </h1>
+    <form class="form-horizontal" name="formulario_ventas" id="formulario_ventas" action="precio_venta.html" role="form" method="POST">
+        <div class="form-group" id="contenedores">
+            <label for="p_comp"> Precio de compra:</label>
+            <input type="text" class="form-control" name="p_comp" id="p_comp" placeholder="Por favor digite el precio de la compra, recuerde no usar caracteres especiales como signo pesos ($)"> 
+        </div>
+        <div class="form-group" id="contenedores">
+            <label for="util"> Utilidad esperada:</label>
+            <input type="text" class="form-control" name="util" id="util" placeholder="Por favor digite el procentaje de utilidad deseada, recuerde no usar caracteres especiales como signo porcentaje (%)"> 
+        </div>
+        <div class="form-group" id="contenedores">
+            <label for="iva"> Impuesto al valor agregado (IVA):</label>
+            <input type="text" class="form-control" name="iva" id="iva" placeholder="Por favor digite el procentaje de iva vigente, recuerde no usar caracteres especiales como signo pesos (%)"> 
+        </div>
+<div class="form-group" id="contenedores">
+  <input type="button" value="Calcular valor de venta" onclick="vender();" id="btn_calcular">
+</div>
+     
+
+      <div class="form-group" id="contenedores">
+        <label for="venta"> Valor de la venta:</label>
+        <input type="text" class="form-control" name="salida" id="venta" placeholder=""> 
+      </div>
+
+    <div class="form-group" id="contenedores">
+      <label for="ganancia"> Ganancia neta por la venta:</label>
+      <input type="text" class="form-control" name="ganancia" id="ganancia" placeholder=""> 
+    </div>
+
+</div>
+    <script src="venta.js">
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

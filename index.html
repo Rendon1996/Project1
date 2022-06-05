@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <title>Fase 3 - 301127_36</title>
+  </head>
+  <body>
+    <!-- Navbar Bootstrap 4 con Dropdown -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: darkred"
+      id="barranav"
+    >
+      <div class="container-fluid" id="titlenav">
+        <a class="navbar-brand" href="index.html">Computer Store</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="index.html"
+                id="menus"
+                >Home</a
+              >
+            </li>
+            <!-- Creando dropdown de administrador -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Administrador
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="background-color: darkred"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="crear_bd.php"
+                    id="submenus"
+                    >Crear Base de datos</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" 
+                  href="crear_tabla.php" 
+                  id="submenus"
+                    >Crear tabla</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="backup.php"
+                    id="submenus"
+                    >Generar Backup</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="pdf.php"
+                    id="submenus"
+                    >Generar PDF</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#" id="menus">Administrador</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="inventario.html" id="menus"
+                >Inventario</a
+              >
+            </li>
+            <!--Creando el Dropdown-->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdownMenuLink"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Utilidades
+              </a>
+              <ul
+                class="dropdown-menu"
+                aria-labelledby="navbarDropdownMenuLink"
+                style="background-color: darkred"
+              >
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="precio_venta.html"
+                    id="submenus"
+                    >Calculadora de precio</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="datos.html" id="submenus"
+                    >Equivalencias entre tamaño de datos</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Contenido de la pagina principal.-->
+<div id="main_page">
+  <h1 id="titulos">
+    Programación de sitios web - Grupo: 301127_36:
+  </h1>
+
+  <div class="row" style="padding-top: 20px;">
+    <!-- <div class="col" style="height: 100%; width: 25%;">
+    <div class="card">
+      <img src="img/img1.jpg" alt="" style="width: 100%; height: auto;">
+      <div class="container">
+        <h2>Jerikson Andrey Acero Ruiz</h2>
+        <p>1006779482</p>  
+      </div>
+    </div>
+    </div> -->
+    <div class="col" style="height: 100%; width: 25%;">
+      <div class="card">
+        <img src="img/img1.jpg" alt="" style="width: 100%; height: auto;">
+        <div class="container">
+          <h2>Andres Felipe Lopez V.</h2>
+          <p>1119893661</p>  
+        </div>
+      </div>
+      </div>
+      <div class="col" style="height: 100%; width: 25%;">
+        <div class="card">
+          <img src="img/img1.jpg" alt="" style="width: 100%; height: auto;">
+          <div class="container">
+            <h2>José Germán Morales L.</h2>
+            <p>1118541864</p>  
+          </div>
+        </div>
+        </div>
+        <div class="col" style="height: 100%; width: 25%;">
+          <div class="card">
+            <img src="img/img1.jpg" alt="" style="width: 100%; height: auto;">
+            <div class="container">
+              <h2>Andres Felipe Rendon R.</h2>
+              <p>1121938372</p>  
+            </div>
+          </div>
+          </div>    
+</div>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
